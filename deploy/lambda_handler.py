@@ -1,5 +1,9 @@
+
+# The purpose of this code is to predict carbon value 
+# using the proposed model using the same image enchancement and feature extraction method
+# This code will containerized in Docker with the proposed model
+
 import cv2
-# from flask import Flask, request, jsonify
 import numpy as np
 import pandas as pd
 from keras.preprocessing.sequence import pad_sequences
@@ -10,9 +14,6 @@ import json
 import os
 from sklearn.preprocessing import MaxAbsScaler
 
-# app = Flask(__name__)
-
-# @app.route('/preprocess-test', methods=['POST'])
 client = boto3.client('lambda')
 s3 = boto3.client('s3')
 
